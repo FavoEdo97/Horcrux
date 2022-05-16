@@ -2,7 +2,7 @@
 Encrypt your files and chunks them (like an horcrux).
 
 With this project you will be able to encrypt your files and split them into chunks , save the key and don’t lose it.
-This project was tested on Windows 10, using Visual Studio, cmake, Google Test.
+This project was tested on Windows 10, using Visual Studio, CMake, Google Test.
 
 ### BoostLib 1.79.0 (REQUIRED)
 To configure Boost to work properly in Windows I followed the steps below.
