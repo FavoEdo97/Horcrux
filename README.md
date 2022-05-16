@@ -27,7 +27,8 @@ https://slproweb.com/download/Win64OpenSSL-3_0_3.exe
 Now depending on the version of OpenSSL installed on your computer, you should take the specific dll and insert it into the **src\dll** directory.
 I left you the dll that I used, which is the same that you will find by downloading OpenSSL from the link above.
 In order to start everything correctly, open the command line and run the command **cmake** using the option **-DOPENSSL_ROOT_DIR** and set this option with the path of the directory OpenSSL installed.
-You should also set the **-DCMAKE_INSTALL_PREFIX** option to have the dll and executables all end up in the **..\build\bin** directory from which you can run the executables. 
+You should also set the **-DCMAKE_INSTALL_PREFIX** option to have the dll and executables all end up in the **..\build\bin** directory from which you can run the executables.
+
 I set it to this value= **"C:\Users\E.Favorido\C++Progetti\cmake\horcrux\build\bin"**.
 
 So I ran this command:
