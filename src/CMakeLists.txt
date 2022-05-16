@@ -8,8 +8,8 @@ set(Boost_USE_STATIC_LIBS   ON)
 
 set(BOOST_TOOLSET msvc-14.1)
 
-message(STATUS "cerco Boost ,almeno la versione 1.66.0 richiesta")
-find_package(Boost 1.67.0 REQUIRED COMPONENTS
+message(STATUS "cerco Boost ,almeno la versione 1.79.0 richiesta")
+find_package(Boost 1.79.0 REQUIRED COMPONENTS
              program_options iostreams)
 
 if (Boost_FOUND)
