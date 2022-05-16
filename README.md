@@ -14,7 +14,9 @@ Then set the following environment variables:
 *BOOST_ROOT*
 
 I set the first variable with this value:**C:\Users\E.Favorido\boost_1_79_0_vc142\lib64-msvc-14.2**
+
 The second: **C:\Users\E.Favorido\boost_1_79_0_vc142**
+
 The third:**C:\UsersE.Favorido\boost_1_79_0_vc142\boost**
 
 ### OpenSSL 3_0_3
