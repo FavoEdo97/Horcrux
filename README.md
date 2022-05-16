@@ -40,7 +40,7 @@ cmake . -DCMAKE_INSTALL_PREFIX="C:\Users\E.Favorido\C++Progetti\cmake\horcrux\bu
 
 This command should copy the DLL in the **src\dll** folder into the **${CMAKE_INSTALL_PREFIX}** set above.
 
-Now open Visual Studio 2019 and launch the build of the project "Installation", if all goes well it should compile the source code and once it is completed it will save the executables generated inside the folder **${CMAKE_INSTALL_PREFIX}**, that is the same above.
+Now open Visual Studio 2019 and launch the build of the project "INSTALL", if all goes well it should compile the source code and once it is completed it will save the executables generated inside the folder **${CMAKE_INSTALL_PREFIX}**, that is the same above.
 
 Now you can finally try to encrypt your files (momentarily only with pure AES) by running the commands from CMake bin directory:
 ```
