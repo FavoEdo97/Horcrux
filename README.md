@@ -26,19 +26,22 @@ For the openssl configuration I downloaded the library from this link:
 https://slproweb.com/download/Win64OpenSSL-3_0_3.exe
 
 ## CMake Command And Run
-Now depending on the version of openssl installed on your computer you should take the specific dll and insert it into the src\dll folder.
-I left you the dll that I used which is the same that you will find by downloading openssl from the link above.
-Now to start everything correctly open the command line as administrator (to be sure) and run the command cmake using the option -DOPENSSL_ROOT_DIR and set this option with the path of the folder openssl installed.
-Ora creare la cartella horcrux\build
-In my case I launched this command:
+Now depending on the version of OpenSSL installed on your computer you should take the specific dll and insert it into the src\dll folder.
+I left you the dll that I used, which is the same that you will find by downloading openssl from the link above.
+Now to start everything correctly open the command line and run the command cmake using the option -DOPENSSL_ROOT_DIR and set this option with the path of the folder OpenSSL installed.
+You should also use the **-DCMAKE_INSTALL_PREFIX** option to have the dll and executables all end up in the **..\build\bin** directory from which you can run the executables. I set it to this value= **"C:\Users\E.Favorido\C++Progetti\cmake\horcrux\build\bin"**.
 
-```cmake . -DOPENSSL_ROOT_DIR="C:\Users\E.Favorido\OpenSSL\OpenSSL-Win64" -S "C:\Users\E.Favorido\C++Progetti\horcrux\src" -B "C:\Users\E.Favorido\C++Progetti\horcrux\build"```
+So now you can run this command:
 
-Running this command should copy the DLL in the src dll folder into the **${CMAKE_INSTALL_PREFIX}/bin** CMake folder
-In my case the folder is: **"C:\Program Files (x86)\horcrux\bin"**
-Now open Visual Studio 2019 as administrator and launch the build of the project "Installation", if all goes well it should compile the source code and once it is completed it will save the executables generated inside the bin folder of cmake , that is the same above.
+```
+cmake . -DCMAKE_INSTALL_PREFIX="C:\Users\E.Favorido\C++Progetti\cmake\horcrux\build\bin"  -DOPENSSL_ROOT_DIR="C:\Users\E.Favorido\OpenSSL\OpenSSL-Win64" -S "C:\Users\E.Favorido\C++Progetti\cmake\horcrux\src" -B "C:\Users\E.Favorido\C++Progetti\cmake\horcrux\build"
 
-If you don’t open VS as an administrator, it won’t be able to move the executables to the cmake bin folder.
+```
+
+This command should copy the DLL in the **src\dll** folder into the **${CMAKE_INSTALL_PREFIX}** set above.
+
+Now open Visual Studio 2019 and launch the build of the project "Installation", if all goes well it should compile the source code and once it is completed it will save the executables generated inside the folder **${CMAKE_INSTALL_PREFIX}**, that is the same above.
+
 Now you can finally try to encrypt your files (momentarily only with pure AES) by running the commands from CMake bin directory:
 ```
 1.user@hostname:~$ horcrux create -n <horcrux count> <inputpath> <output path>
