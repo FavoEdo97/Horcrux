@@ -1,5 +1,5 @@
 # Horcrux
-Encrypt your files and chunks them (like an horcrux)
+Encrypt your files and chunks them (like an horcrux).
 
 With this project you will be able to encrypt your files and split them into chunks , save the key and don’t lose it.
 This project was tested on Windows 10, using Visual Studio, cmake, Google Test.
